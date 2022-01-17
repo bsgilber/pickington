@@ -1,4 +1,4 @@
-FROM fetch-docker.jfrog.io/go-build:1.17 AS build
+FROM golang:1.17 AS build
 WORKDIR /app/src/
 RUN git config --global url."git@bitbucket.org:".insteadOf "https://bitbucket.org/"
 COPY go.mod .
